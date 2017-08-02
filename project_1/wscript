@@ -17,6 +17,6 @@ def configure(conf):
 
 def build(bld):
     bld(features='py',  # lets waf know that this is a build task for python
-        source=[ 'hello_class.py' ], # project files
+        source=[ 'hello_class.py', 'extra_file.py' ], # project files
         install_from='.' # where to start the installation from
         )
