@@ -1,0 +1,22 @@
+#! /usr/bin/env python
+# encoding: utf-8
+
+# VERSION and APPNAME are used for project deployment and instruction
+APPNAME='project_1' # name of the project
+VERSION='0.0.1'     # project's version
+
+top = '.'      # references the top of your project
+out = 'build'  # relative path to a subdirectory containing build objects
+
+def options(opt):
+    opt.load('python') 
+
+def configure(conf):
+    conf.load('python')
+    conf.check_python_version((2,4,2))
+
+def build(bld):
+    bld(features='py',  # lets waf know that this is a build task for python
+        source=[ 'hello_class.py' ], # project files
+        install_from='.' # where to start the installation from
+        )

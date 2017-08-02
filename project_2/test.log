@@ -1,0 +1,29 @@
+----------------------------------------
+Checking for header sadlib.h
+==>
+#include <sadlib.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_7ff7889ec2cdbf457f19b37c4a90f8a7/test.cpp[0m
+
+['/usr/bin/clang++', '-DHAVE_STDIO_H=1', '../test.cpp', '-c', '-o/Users/ritagarcia/Desktop/waf/build_workshop/project_2/build/.conf_check_7ff7889ec2cdbf457f19b37c4a90f8a7/testbuild/test.cpp.1.o']
+err: ../test.cpp:1:10: fatal error: 'sadlib.h' file not found
+#include <sadlib.h>
+         ^
+1 error generated.
+
+from /Users/ritagarcia/Desktop/waf/build_workshop/project_2: Test does not build: Traceback (most recent call last):
+  File "/Users/ritagarcia/Desktop/waf/build_workshop/waf_download/waf-1.9.11/.waf-1.9.11-fdf50ea98d4e1e93bbe9ece21167b6cd/waflib/Configure.py", line 327, in run_build
+    bld.compile()
+  File "/Users/ritagarcia/Desktop/waf/build_workshop/waf_download/waf-1.9.11/.waf-1.9.11-fdf50ea98d4e1e93bbe9ece21167b6cd/waflib/Build.py", line 186, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
+
+not found
+from /Users/ritagarcia/Desktop/waf/build_workshop/project_2: The configuration failed
